@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Website with Photos</title>
+
+<style>
+body {
+            background-image: url('img/istockphoto-1331943958-612x612.jpg');
+            background-size: cover;
+            color: white;
+        }
+
+.photos {
+  display: flex; 
+  justify-content: space-around; 
+  margin-top: 20px; 
+}
+
+
+.photo {
+  text-align: center; 
+  margin: 10px; 
+}
+
+
+.photo img {
+  width: 200px; 
+  height: 200px; 
+  border-radius: 10px; 
+}
+
+
+.photo p {
+  font-size: 18px; 
+  margin-top: 10px; 
+}
+
+</style>
+
+</head>
+<body>
+
+<center><h1>Welcome Admin</h1></center>
+
+<div class="photos">
+  <div class="photo">
+
+    <a href="admindata.php"><img src="img/360_F_277121105_LUX7QMRCBt0ZO94w1LgoubA13Xbiv637.jpg" alt="Settings"></a>
+    <p class="name">Data Base Settings</p>
+  </div>
+  <div class="photo">
+    <a href="help.html"> <img src="img/depositphotos_30971713-stock-illustration-red-help-button.jpg" alt="Profile"></a>
+    <p class="name">Help</p>
+  </div>
+  <div class="photo">
+    <a href="index.php"> <img src="img/istockphoto-1309797875-612x612.jpg" alt="Upload"></a>
+    <p class="name">User Page Home</p>
+  </div>
+</div>
+
+</body>
+</html>
