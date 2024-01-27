@@ -1,6 +1,7 @@
 <?php
 require 'connect.php';
 
+
 ?>
 
 <!DOCTYPE html>
@@ -12,11 +13,11 @@ require 'connect.php';
     <title>Data Page</title>
     <script>
         function addToCart(itemId) {
-            fetch('cartnew.php?action=add&id=' + itemId)
+            fetch('cartnew.php?action=add&item_id=' + itemId)
                 .then(response => response.text())
                 .then(data => {
                     console.log(data); 
-              header('Location: cartnew.php');
+                    window.location.href = "cartnew.php";
     exit();
                 });
         }
@@ -80,16 +81,45 @@ width:400px;
 	
 }
 table button{
-    font-size:1.8rem;
-    background-color:white;
-    color:black;
-            text-decoration: none;
+     /* Basic styling */
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline from link */
+  color: #333;
+  background-color: #f2f2f2;
+
+  /* Customize to your preferences */
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: pointer; /* Change cursor to a pointer */
+
+  /* Hover effect */
+  &:hover {
+    background-color: #ddd;
+}
 }
 table a {
-    border:1px solid black;
-    background-color:white;
-    color:black;
-            text-decoration: none;
+    /* Basic styling */
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline from link */
+  color: #333;
+  background-color: #f2f2f2;
+
+  /* Customize to your preferences */
+  font-family:Monospace;
+  font-size:1.2rem;
+  
+  cursor: pointer; /* Change cursor to a pointer */
+
+  /* Hover effect */
+  &:hover {
+    background-color: #ddd;
+}
           
         }
         table td{
@@ -114,6 +144,25 @@ table a {
     margin: 0;
     padding: 14px;
     border: 3px solid black;
+  }
+}
+.my-button {
+  /* Basic styling */
+  
+  padding: 10px 20px;
+  
+  text-decoration: none; /* Remove underline from link */
+  color: #333;
+  background-color: transparent;
+color:blue;
+  /* Customize to your preferences */
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: pointer; /* Change cursor to a pointer */
+
+  /* Hover effect */
+  &:hover {
+    background-color: #ddd;
   }
 }
 
@@ -177,7 +226,7 @@ table a {
 <center><h1 style="color:red;">SAFARI PACKAGES</h1></center>
     <table border="1" cellspacing="0" cellpadding="100">
         <tr>
-            <td>#</td>
+           
             <td><b>Place</b></td>
             <td><b>Details</b></td>
             <td><b>Action</b></td>
@@ -185,19 +234,20 @@ table a {
         </tr>
         <?php
         $i = 1;
-        $rows = mysqli_query($conn, "SELECT * FROM additemsdata ORDER BY id DESC");
+        $rows = mysqli_query($conn, "SELECT * FROM additemsdata ORDER BY item_id DESC");
 
         foreach ($rows as $row) :
         ?>
         <tr>
-            <td><?php echo $i++; ?></td>
+           
             <td> <img src="image/<?php echo $row['image']; ?>" width="200" title="<?php echo $row['image']; ?>"> </td>
-            <td><b><?php echo $row["name"]; ?><b></td>
+            <td><b><?php echo $row["name"]; ?> <b><br><br> <a href="package.html" class="my-button">See More ...</a>
+ </td>
             <td>
-                <button onclick="addToCart(<?php echo $row['id']; ?>)"><b>Add to Cart</b></button>
+                <button  onclick="addToCart(<?php echo $row['item_id']; ?>)"><b>Add to Cart</b></button>
             </td>
             <td>
-                <a  href="payforlog.php?package_id=<?php echo $row['id']; ?>"><b> Book Now</b></a> <!-- Payment button -->
+                <a  href="payforlog.php?package_id=<?php echo $row['item_id']; ?>"> Book Now</a> <!-- Payment button -->
             </td>
             <br>
         </tr>
@@ -216,7 +266,7 @@ table a {
 		 <p>+94 76 3245580</p>
 		 <p>safarigalle@gmail.com</p>
 		 <p>Office Hours:</p>
-		 <p>Monday – Saturday, 8h-17h</p>
+		 <p>Monday  Saturday, 8h-17h</p>
 	 </div>
 	 
 	 <div class="col-2">
