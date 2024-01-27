@@ -1,17 +1,18 @@
 <?php
 require 'connect.php';
 
-if (isset($_GET['id'])) {
-    $itemId = $_GET['id'];
+if (isset($_GET['item_id'])) {
+    $itemId = $_GET['item_id'];
         
     // Get item details
-    $itemQuery = mysqli_query($conn, "SELECT * FROM additemsdata WHERE id = $itemId");
+    $itemQuery = mysqli_query($conn, "SELECT * FROM additemsdata WHERE item_id = $itemId");
     $item = mysqli_fetch_assoc($itemQuery);
 
     // Add item to cart array in session
     if (!isset($_SESSION['cart'])) {
         
         $_SESSION['cart'] = [];
+        
     }
      
     $_SESSION['cart'][] = $item;
@@ -24,7 +25,7 @@ if (isset($_GET['id'])) {
     if (isset($_SESSION['cart'][$deleteId])) {
         unset($_SESSION['cart'][$deleteId]);
         $_SESSION['cart'] = array_values($_SESSION['cart']); // Re-index the array after deletion
-        echo "Item deleted from cart!";
+        echo '<script>window.location.href = "cartnew.php";</script>';
     } else {
         echo "Item not found in cart!";
     }
@@ -40,7 +41,8 @@ if (isset($_GET['id'])) {
             echo "<td><img src='image/{$item['image']}' width='100'></td>";
             echo "<td>{$item['name']}</td>";
             echo "<td><a href='?delete=$index' style='border: 1px solid red; padding: 5px; color: white;'>Delete</a></td>"; // Delete link/button
-            echo "</tr>";
+            echo "<td><a href='payforlog.php' style='border: 1px solid red; padding: 5px; color: white;'>Book Now</a></td>"; // Delete link/button
+         echo "</tr>";
         }
         echo "</table>";
     } else {
