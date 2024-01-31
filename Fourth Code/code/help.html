@@ -1,0 +1,253 @@
+<html>
+<head>
+  <script src="script.js"></script>
+<style>
+:root {
+  --catColor: yellow;
+  
+  --pupColor: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('img/1143024-3840x2160-desktop-4k-robot-background.jpg');
+  background-size: cover;
+  color: white;
+}
+.container {
+  height: 30.25em;
+  width: 30.25em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 80%;
+  top: 50%;
+}
+
+.cat {
+  
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 18.75em;
+  
+ 
+  &:after {
+    content: "";
+    position: absolute;
+   
+    background: linear-gradient(var(--colColor) 1.87em, var(--catColor) 1.87em);
+    bottom: 4.93em;
+  }
+  animation: rotateAnimation 2s infinite alternate;
+  transform-origin: bottom;
+}
+
+.face {
+  position: absolute;
+  background-color: var(--catColor);
+  height: 7.5em;
+  width: 15em;
+  bottom: 8.18em;
+  left: -3.62em;
+  border-radius: 3.75em;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 3.75em;
+    width: 5em;
+    background-color: var(--pupColor);
+    border-radius: 1.87em;
+    left: 1.87em;
+    top: 1.56em;
+    box-shadow: 6.25em 0 var(--pupColor);
+  }
+}
+
+.eyes {
+  height: 50px;
+}
+.pupils {
+  position: absolute;
+  top: 3.48em;
+  left: 4.36em;
+  transform: translate(-50%, -50%);
+  height: 2.5em;
+  width: 1.56em;
+  border-radius: 0.93em;
+  box-shadow: 6.25em 0 #000;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    font-size: 1.2em;
+  }
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotateZ(10deg) translateY(39px); 
+    filter: blur(2px);
+  }
+  25% {
+    transform: rotateZ(6deg);
+    filter: blur(0px);
+  }
+  50% {
+    transform: rotateZ(10deg) translateY(-39px); 
+    filter: blur(1px);
+  }
+  75% {
+    transform: rotateZ(-23deg);
+    filter: blur(0px);
+  }
+  100% {
+    transform: rotateZ(10deg) translateY(36px); 
+    filter: blur(1px);
+  }
+}
+.circle {
+  width: 300px;
+  height: 300px;
+  background-color: yellow; 
+  border-radius: 50%;
+  margin-top:110px;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336; 
+  color: white;
+  margin-bottom: 15px;
+}
+
+
+.closebtn {
+
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.callout {
+  position: fixed;
+  bottom: 535px;
+  right: 390px;
+  margin-left: 20px;
+  max-width: 300px;
+  animation: shake 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+
+.callout-header {
+  padding: 25px 15px;
+  background: #555;
+  font-size: 30px;
+  color: white;
+}
+
+
+.callout-container {
+  padding: 15px;
+  background-color: #ccc;
+  color: black
+}
+
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+.closebtn:hover {
+  color: lightgrey;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(10); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-30px); } 
+}
+
+</style>
+</head>
+<body>
+
+
+       
+
+
+ <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+   Hellow Admin ... Welcome !!!
+</div>
+
+
+ <section id="troubleshooting"><br><br>
+            <h3 style="color:white;">✨  Effortlessly update: Keep pace with changes by uploading new extensions,</h3>
+			                      <h3>adjusting settings,and deploying configuration updates all from the</h3>
+                                  <h3> centralized interface. </h3>
+								  <br><br><br><br>
+								  <h3>✨ Precise control: Manage user groups , grant </h3>
+               
+               <h3 style="color:white;">  permissions, and tailor the browsing experience to specific needs.</h3>
+                <br><br><br><br>
+            <h3 style="color:white;">✨ Stay organized: Easily delete outdated content, unused extensions, and </h3>
+			<h3>inactive user accounts to maintain a clean and efficient system.</h3>
+          
+    
+    </section>
+			
+<div class="callout">
+  <div class="callout-header">Robo say</div>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <div class="callout-container">
+    <p>Do you want any help from me
+	<br> Click hear ...</p>
+  </div>
+</div>
+
+<section>
+
+<div class="container">
+  <div class="cat">
+    <div class="whiskers"></div>
+    <div class="face">
+      <div class="eyes">
+        <div class="pupils" id="pupils"></div>
+  </div>
+  
+
+</div>
+ </section>
+ <section>
+<div class="container">
+  <div class="cat">
+    <div class="whiskers"></div>
+    <div class="face">
+      <div class="eyes">
+        <div class="pupils" id="pupils"></div>
+  </div>
+<div class="circle"></div>
+</div>
+ </section>
+</body>
+</html>

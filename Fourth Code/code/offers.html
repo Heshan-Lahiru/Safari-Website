@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  .slider {
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  border: 2px solid #ccc;
+  font-family: 'Font Awesome 5 Free';
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.prev-btn {
+  content: "\f053"; /* Left arrow icon */
+  left: calc(5% - 40px);
+}
+
+.next-btn {
+  content: "\f054"; /* Right arrow icon */
+  right: calc(5% - 40px);
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.section2{
+    position: absolute;
+  top: 75%; 
+  
+}
+.section3{
+    position: absolute;
+  top: 125%; 
+  
+}
+/* Existing styles for slider and buttons */
+
+.image-card {
+  width: 25%; /* Adjust width as needed */
+  float: left;
+  margin: 10px;
+  text-align: center; /* Optional for centering images within cards */
+}
+
+.image-card img {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.images-container img {
+  width: 30%; /* Adjust width as needed */
+  margin: 10px;
+}
+.images-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.images-container1 img {
+  width: 30%; /* Adjust width as needed */
+  margin: 10px;
+}
+
+
+  </style>
+</head>
+<body><section>
+  <div class="slider">
+    <div class="slide">
+      <img src="offer/mask-3235633_1280.jpg" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="offer/Nine Arch Bridge Sri Lanka.jpg" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="offer/6-Best-Water-Sport-Activities-in-Sri-Lanka-gallery-pop-up-(3)-min.jpg" alt="Image 3">
+    </div>
+    <button class="prev-btn">&#8249;</button>
+    <button class="next-btn">&#8250;</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let currentSlide = 0;
+
+function showSlide(slideIndex) {
+  slides.forEach((slide, index) => {
+    slide.classList.remove('active');
+    if (index === slideIndex) {
+      slide.classList.add('active');
+    }
+  });
+}
+
+showSlide(currentSlide);
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+const autoPlayInterval = setInterval(nextSlide, 3000); // Change 3000 to desired interval in milliseconds
+
+// You can add logic to pause autoplay on hover or manual navigation
+
+
+  </script>
+
+<section>
+    <div class="section2">
+  
+      <div class="images-container">
+        <center><h1 style="font-size:1rem; color:green;">Sigiriya or Sinhagiri (Lion Rock Sinhala: සීගිරිය,
+             Tamil: சிகிரியா/சிங்ககிரி, pronounced see-gi-ri-yə) is an ancient rock fortress located in
+              the northern Matale District near the town of Dambulla in the Central Province, Sri Lanka. 
+              It is a site of historical and archaeological significance that is dominated by a massive
+               column of granite approximately 180 m (590 ft) high.[2]
+               According to the ancient Sri Lankan chronicle the Cūḷavaṃsa, 
+               this area was a large forest, then after storms and landslides 
+               it became a hill and was selected by King Kashyapa (AD 477–495) for his new capital.
+                He built his palace on top of this rock and decorated its sides with colourful frescoes. 
+                On a small plateau about halfway up the side of this rock he built a gateway in the form of 
+                an enormous lion. The name of this place is derived from this structure; Siṃhagiri, the Lion Rock.</h1></center>
+        <img src="offer/01-265.jpg" alt="Image 1">
+        <img src="offer/IMG_20190607_203423_967-1024x768.webp" alt="Image 2">
+        <img src="offer/Screenshot 2564-08-02 at 10.14.55.png" alt="Image 3">
+       
+        </div>
+    </div>
+  </section>
+
+  
+<section>
+    <div class="section3">
+  
+      <div class="images-container1">
+        <center><h1 style="font-size:1rem; color:green;">Nuwaragala Kanda belongs
+             to the Maha Oya Divisional Secretariat in the Ampara District of the Eastern Province.
+              Nuwaragala is geographically important as a remnant mountain (more than 300 meters high 
+              after erosion) belonging to the Gal Oya mountain range, which is located in half the plains 
+              of Sri Lanka (region between 30-300 m above sea level). The height is 658 meters.
+
+            This area is associated with the aborigines of Sri Lanka. It is said that an ancient
+             group of people lived in the jungle called Heethala Vanni associated with this mountain.
+              VANISHED TRAILS, written by RL Spittle, a British physician, describes this area. The book was 
+              translated into Sinhala by Mr. AP Gunaratne under the title Deleted Dadaman.</h1></center>
+        <img src="offer/Nuwaragala.jpg" alt="Image 1">
+        <img src="offer/nuwaragala6.jpg" alt="Image 2">
+        <img src="offer/mqdefault.jpg" alt="Image 3">
+       
+        </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
