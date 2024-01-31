@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    body
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        
+        background-image:url(jpgimage/dark-forest-shsyax3tzax42p9o.jpg);
+        font-size: 20px;
+    }
+    .container{
+        font-size: larger;
+        text-align: left;
+        padding-top: 1.4rem;
+        color:#917e12;
+        margin-left: 3rem;
+    
+    }
+    h1{
+       
+        padding-bottom: 1.5rem;
+    }
+   
+    .contact-box{
+        background-color: none;
+        display:flex;
+        color: rgb(117, 109, 59);
+       margin-top: rem;
+       margin-left: 7rem;
+       gap: 20rem;
+       
+
+       
+    }
+    
+    .contact-box .contact-left form fieldset{
+        width: 25rem;
+        height: 35rem;
+        align-items: center;
+        border-radius: 5px;
+        align-items: center;
+        padding-left: 2.8rem;
+        
+        
+    }
+    .contact-box .contact-left form fieldset h2{
+        padding-left: 2rem;
+        padding-top: 3.5rem;
+        
+    }
+    .contact-box .contact-left form fieldset .input-group{
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        padding-right: 5rem;
+        margin-bottom: 5px;
+    }
+
+    .contact-box .contact-left form fieldset .input-group input{
+        border-radius: 10px;
+        height: 2rem;
+        padding-left: 0.5rem;
+       
+    }
+
+    .btn-send{
+        padding: 5px 10px;
+        width: 5rem;
+        border-radius: 12px;
+        border-style: none;
+        margin-right: 3rem;
+        background-color: #917e12;
+        font-size: 20px;
+        margin-left: 1rem;
+        margin-top: 17px;
+        font-weight: 500px;
+        
+       
+}
+
+.contact-box .contact-right{
+    
+    pad: 30px;
+   
+}
+
+.detail{
+margin:15px 1.5px;
+
+}
+.r1{
+
+    background: none;
+}
+.box{
+    padding-bottom: rem;
+    border-style: none;
+}
+.h31{
+    margin-top: 5rem;
+}
+.h32{
+    margin-top: 1.8rem;
+}
+.ReachUs
+{
+margin-bottom: 4.5rem;
+
+}

@@ -1,0 +1,446 @@
+*{
+	font-family:Monospace;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	scroll-padding-top:4rem;
+	scroll-behavior:smooth;
+	list-style:none;
+	text-decoration:none;
+}
+
+:root{
+	--main-color:#bc9667;
+	--secondary-color:#edeae3;
+	--text-color:#1b1b1b;
+	--bg-color:#fff;
+	
+	--box-shadow:2px 2px 10px 14px rgb(14 55 54 / 15%);
+}
+section{
+	padding:50px 100px;
+}
+
+
+img{
+	width:100px;
+}
+body{
+	color:var(--text-color);
+}
+header{
+	position:fixed;
+	width:100%;
+	top:0;
+	right:0;
+    z-index:1000;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+    border:1px solid black;
+	padding:10px 100px;
+	background:var(--text-color);
+	transition:0.5s linear;
+}
+.logo img{
+	width:60px;
+}
+.navbar{
+	display:flex;
+}
+.navbar a{
+	padding:8px 17px;
+	color:var(--bg-color);
+	font-size:1rem;
+	text-transform:uppercase;
+	font-weight:500;
+}
+.navbar a:hover{
+	background-color:var(--main-color);
+	border-radius:0.2rem;
+	transition:0.5s all linear;
+}
+.header-icon{
+	font-size:12px;
+	cursor:pointer;
+	z-index:10000;
+	display:flex;
+	column-gap:0.8rem;
+}
+.home{
+	width:100%;
+	min-height:90vh;
+	background:url(img/5041793.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(17rem,auto));
+	align-items:center;
+	gap:1.5rem;
+	
+}
+.home-text h1{
+	font-size:5.4rem;
+	font-family:Monospace;
+	color:white;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+.home-text span{
+	color:yellow;
+	font-family:Monospace;
+}
+.btn{
+	padding:10px 40px;
+	border-radius:0.3rem;
+	font-size:0.938rem;
+	font-family:Fantasy;
+	color:var(--bg-color);
+	letter-spacing:1px;
+	background-color:yellow;;
+	font-weight:500;
+}
+.transparent-btn {
+  background-color: transparent;
+  border: 2px solid;
+  color: inherit; 
+  padding: 10px 20px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; 
+}
+
+.transparent-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2); 
+}
+.btn:hover{
+	background:#8a6f4d;
+}
+.about{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(17rem,auto));
+	align-items:center;
+	gap:1.5rem;
+}
+.about-text h2{
+	font-size:2.8rem;
+	text-transform:uppercase;
+}
+.about-text p{
+	
+	font-size:1.638rem;
+	margin:0.5rem 0 1.1rem;
+}
+
+.about img {
+  width: 400px;
+  height: auto; 
+}
+.srilanka img{
+	  width: 400px;
+  height: auto; 
+}
+.elephant img{
+	margin:0;
+	padding:0;
+  width: 1450px;
+  height: auto; 
+  position:absolute;
+	top:0px;
+	left:0px;
+}
+#parent{
+	position:relative;
+}
+.black{
+	background:rgba(0,0,0,0.8);
+	width:800px;
+	height:650px;
+	position:absolute;
+	top:40px;
+	left:650px;
+}
+.a{
+	font-size:0.9rem;;
+	color:white;
+	position:absolute;
+	top:120px;
+	left:790px;
+}
+.b{
+	font-size:1.9rem;;
+	color:white;
+	position:absolute;
+	top:180px;
+	left:790px;
+}
+.c{
+	font-size:1.3rem;;
+	color:white;
+	position:absolute;
+	top:290px;
+	left:790px;
+}
+.tiger img{
+	margin:0;
+	padding:0;
+  width: 1450px;
+  height: auto; 
+  position:absolute;
+	top:1200px;
+	left:0px;
+}
+#parentnew{
+	position:relative;
+}
+.white{
+	background:white;
+	width:1000px;
+	height:550px;
+	position:absolute;
+	top:840px;
+	left:450px;
+}
+.first {
+    background: url(img/elephant-tree-sunset-sunrise.jpg);
+    width: 220px;
+    height: 400px;
+    position: absolute;
+    display: flex;
+    top: 850px;
+    left: 480px;
+    background-size: cover;
+    background-position: center;
+}
+.second {
+    background: url(img/2278-2048.webp);
+    width: 220px;
+    height: 400px;
+    position: absolute;
+    display: flex;
+    top: 980px;
+    left: 730px;
+    background-size: cover;
+    background-position: center;
+}
+.third {
+    background: url(img/06-1024x768.jpg);
+    width: 220px;
+    height: 400px;
+    position: absolute;
+    display: flex;
+    top: 890px;
+    left: 990px;
+    background-size: cover;
+    background-position: center;
+}
+.fourth {
+    background: url(img/exploring-amazing-nature-jeep-safari-720169.jpg);
+    width: 220px;
+    height: 400px;
+    position: absolute;
+    display: flex;
+    top: 960px;
+    left: 1250px;
+    background-size: cover;
+    background-position: center;
+}
+.four-pic h1{
+	font-size:1.4rem;
+	font-family:Monospace;
+	color:black;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	
+}
+.four-pic span{
+	color:#ff6347;
+	font-family:Monospace;
+}
+
+
+.last-text h1{
+	font-size:5.4rem;
+	font-family:Monospace;
+	color:white;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+.last-text span{
+	color:yellow;
+	font-family:Monospace;
+}
+.tiger .overlay-text {
+  position: absolute;
+  top: 1800px; 
+  left: 650px;
+  transform: translate(-50%, -50%);
+  color: white; 
+  text-align: center;
+}
+
+.tiger .overlay-text h1 {
+  font-size: 3rem; 
+  font-family: 'Monospace', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+.overlay-text span{
+	color:yellow;
+	font-family:Monospace;
+}
+.lastblack blck{
+	margin:0;
+	padding:0;
+  width: 1450px;
+  height: auto; 
+  position:absolute;
+	top:1200px;
+	left:0px;
+}
+.footer{
+	margin-top:2150px;
+	width:auto;
+	padding:100px 15%;
+	background:#333;
+	color:#efefef;
+	display:flex;
+}
+.footer div{
+	text-align:center;
+}
+.col-2{
+	flex-grow:4;
+	
+	
+}
+.footer div{
+	font-weight:400;
+	margin-bottom:50px;
+	letter-spacing:1px;
+}
+.col-1 p{
+	display:block;
+	text-decoration:none;
+	color:#efefef;
+	margin-bottom:10px;
+}
+.col-2 img{
+	width:200px;
+	height:auto;
+}
+.col-3 img{
+	width:200px;
+	height:auto;
+}
+
+/*  ----------------SAFARI CSS Start now  ----------------------------------*/
+
+
+.safarihome{
+	width:100%;
+	min-height:100vh;
+	top:0;
+	left:0;
+	background:url(img/1341511.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(17rem,auto));
+	align-items:center;
+	gap:1.5rem;
+	
+}
+.header-icon a{
+	color:white;
+	padding:8px 17px;
+	
+	font-size:1rem;
+	text-transform:uppercase;
+	font-weight:500;
+}
+.about-textnew h1{
+	
+	font-size:3.8rem;
+	text-transform:uppercase;
+}
+.constrainertwo{
+	position:relative;
+	width:1100px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;
+	padding:30px;
+	margin-top:8%;
+}
+.constrainertwo .card{
+	width:300px;
+	position:relative;
+	height:500px;
+	 background-color:silver;
+	 background-size: cover;
+	 background-position: center;
+	margin:30px 10px;
+	padding:20px 15px;
+	display:flex;
+	flex-direction:column;
+	box-shadow:0.9px 20px #e6e6e6;
+	transition:0.3s ease-in-out;
+	margin-top:5%;
+}
+.constrainertwo .card .imgbx{
+	position:relative;
+	width:260px;
+	height:260px;
+	top:-60px;
+	left:20px;
+	box-shadow: 0 5px 20px rbga (0,0,0,1.2);
+}
+.constrainertwo .card .imgbx img{
+	width:200px;
+	border-radius:10px;
+}
+.imgbx:hover img{
+	transform: scale(1.1);
+
+}
+.footer2{
+	margin-top:300px;
+	width:auto;
+	padding:100px 15%;
+	background:#333;
+	color:#efefef;
+	display:flex;
+}
+.footer2 div{
+	text-align:center;
+}
+.col-2{
+	flex-grow:4;
+	
+	
+}
+.footer2 div{
+	font-weight:400;
+	margin-bottom:50px;
+	letter-spacing:1px;
+}
+.col-1 p{
+	display:block;
+	text-decoration:none;
+	color:#efefef;
+	margin-bottom:10px;
+}
+.col-2 img{
+	width:200px;
+	height:auto;
+}
+.col-3 img{
+	width:200px;
+	height:auto;
+}
